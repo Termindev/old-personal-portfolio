@@ -1,5 +1,12 @@
 <template>
-  <form ref="form" @submit.prevent="sendEmail" class="md:p-10">
+  <form
+    ref="form"
+    @submit.prevent="
+      sendEmail();
+      this.$refs.form.reset();
+    "
+    class="md:p-10"
+  >
     <label class="my-8 text-2xl">
       <span class="my-6">Full Name</span>
       <input
