@@ -1,11 +1,11 @@
 <template>
-  <div class="aurora-outer grid grid-cols-1 lg:grid-cols-2 p-12 sm:p-24">
+  <div class="aurora-outer grid grid-cols-1 md:grid-cols-2 p-12 sm:p-24">
     <div>
       <h1 class="text-4xl my-4">Get in Contact</h1>
       <h4 class="text-2xl mb-4">Fill up this form to send me an email</h4>
       <ContactForm />
+      <div class="border-b border-slate-600 my-4"></div>
     </div>
-    <div class="border-b border-slate-600 my-4"></div>
     <div class="md:p-12 mt-5">
       <h1 class="md:text-4xl text-2xl mb-4">Want to straightly contact me?</h1>
       <h1 class="md:text-2xl text-xl mb-6">My Contact information</h1>
