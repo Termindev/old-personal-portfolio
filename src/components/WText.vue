@@ -1,12 +1,14 @@
 <template>
   <div class="aurora-outer" style="height: 92vh">
     <div class="sm:flex text-5xl mx-20 pt-44 mb-12">
-      <span class="sm:mx-1 -mx-4">Hello, I'm</span
-      ><span class="sm:hidden inline-block ml-3"> &nbsp; </span>
-      <VueWriter
-        class="sm:mx-1 inline"
-        :array="['TerminDev.', 'a Web Developer.']"
-      />
+      <span class="sm:mx-1 mx-4"
+        >Hello, I'm
+
+        <VueWriter
+          class="inline ml-1"
+          :array="['TerminDev.', 'a Web Developer.']"
+        />
+      </span>
     </div>
     <a
       href="#works"
