@@ -22,11 +22,6 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {};
-</script>
-
 <style scoped>
 .icon {
   filter: invert(35%) sepia(70%) saturate(4228%) hue-rotate(227deg)

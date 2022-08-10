@@ -1,3 +1,13 @@
+<script setup>
+const props = defineProps({
+  imgLink: String,
+  Title: String,
+  TagOne: String,
+  TagTwo: String,
+  TagThree: String,
+});
+</script>
+
 <template>
   <div
     class="max-w-sm rounded-lg overflow-hidden shadow-xl border border-slate-700 border-opacity-30"
@@ -25,17 +35,3 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  props: {
-    imgLink: String,
-    Title: String,
-    TagOne: String,
-    TagTwo: String,
-    TagThree: String,
-  },
-};
-</script>
-
-<style></style>

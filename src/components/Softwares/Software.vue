@@ -1,3 +1,11 @@
+<script setup>
+const props = defineProps({
+  imgLink: String,
+  title: String,
+  color: String,
+});
+</script>
+
 <template>
   <div class="container md:max-w-xs" style="max-width: 240px">
     <div class="card">
@@ -24,16 +32,6 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  props: {
-    imgLink: String,
-    title: String,
-    color: String,
-  },
-};
-</script>
 
 <style>
 .container .card .icon {

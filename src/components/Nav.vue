@@ -55,11 +55,6 @@
     </ul>
   </nav>
 </template>
-
-<script>
-export default {};
-</script>
-
 <style>
 @media (max-width: 767px) {
   .navicon {

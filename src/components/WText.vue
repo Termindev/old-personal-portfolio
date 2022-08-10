@@ -1,3 +1,7 @@
+<script setup>
+import VueWriter from "vue-writer";
+</script>
+
 <template>
   <div class="aurora-outer" style="height: 92vh">
     <div class="sm:flex text-5xl mx-12 sm:mx-20 pt-44 mb-12">
@@ -22,10 +26,3 @@
     >
   </div>
 </template>
-
-<script>
-import VueWriter from "vue-writer";
-export default {
-  components: { VueWriter },
-};
-</script>

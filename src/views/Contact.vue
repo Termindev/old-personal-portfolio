@@ -1,3 +1,8 @@
+<script setup>
+import CCard from "@/components/Contact/CCard.vue";
+import ContactForm from "@/components/Contact/ContactForm.vue";
+</script>
+
 <template>
   <div class="aurora-outer grid grid-cols-1 lg:grid-cols-2 p-12 sm:p-24">
     <div>
@@ -15,35 +20,3 @@
     </div>
   </div>
 </template>
-
-<script>
-import emailjs from "@emailjs/browser";
-import CCard from "@/components/Contact/CCard.vue";
-import ContactForm from "@/components/Contact/ContactForm.vue";
-
-export default {
-  components: {
-    CCard,
-    ContactForm,
-  },
-  methods: {
-    sendEmail() {
-      emailjs
-        .sendForm(
-          process.env.VUE_APP_SERVICE,
-          process.env.VUE_APP_TEMPLATE,
-          this.$refs.form,
-          process.env.VUE_APP_PUBLIC_KEY
-        )
-        .then(
-          (result) => {
-            console.log("SUCCESS!", result.text);
-          },
-          (error) => {
-            console.log("FAILED...", error.text);
-          }
-        );
-    },
-  },
-};
-</script>

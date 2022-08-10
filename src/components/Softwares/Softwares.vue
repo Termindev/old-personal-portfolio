@@ -1,3 +1,8 @@
+<script setup>
+import Software from "./Software.vue";
+import VueWriter from "vue-writer";
+</script>
+
 <template>
   <hr />
   <div class="aurora-outer pb-6" id="softwares">
@@ -38,15 +43,3 @@
     </div>
   </div>
 </template>
-
-<script>
-import Software from "./Software.vue";
-import VueWriter from "vue-writer";
-
-export default {
-  components: {
-    VueWriter,
-    Software,
-  },
-};
-</script>

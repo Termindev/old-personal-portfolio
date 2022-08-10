@@ -1,3 +1,28 @@
+<script setup>
+import emailjs from "@emailjs/browser";
+import { ref } from "@vue/reactivity";
+const form = ref(null);
+
+const sendEmail = () => {
+  emailjs
+    .sendForm(
+      process.env.VUE_APP_SERVICE,
+      process.env.VUE_APP_TEMPLATE,
+      form.value,
+      process.env.VUE_APP_PUBLIC_KEY
+    )
+    .then(
+      (result) => {
+        console.log("SUCCESS!", result.text);
+      },
+      (error) => {
+        console.log("FAILED...", error.text);
+      }
+    );
+  form.value.reset();
+};
+</script>
+
 <template>
   <form ref="form" @submit.prevent="sendEmail" class="mt-8">
     <div class="mb-8 text-2xl">
@@ -33,32 +58,6 @@
     />
   </form>
 </template>
-
-<script>
-import emailjs from "@emailjs/browser";
-
-export default {
-  methods: {
-    sendEmail() {
-      emailjs
-        .sendForm(
-          process.env.VUE_APP_SERVICE,
-          process.env.VUE_APP_TEMPLATE,
-          this.$refs.form,
-          process.env.VUE_APP_PUBLIC_KEY
-        )
-        .then(
-          (result) => {
-            console.log("SUCCESS!", result.text);
-          },
-          (error) => {
-            console.log("FAILED...", error.text);
-          }
-        );
-    },
-  },
-};
-</script>
 
 <style scoped>
 ::placeholder {

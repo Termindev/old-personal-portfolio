@@ -1,3 +1,7 @@
+<script setup>
+import Work from "@/components/Works/Work.vue";
+</script>
+
 <template>
   <hr />
   <div class="aurora-outer" id="works">
@@ -14,15 +18,3 @@
     </div>
   </div>
 </template>
-
-<script>
-import Work from "@/components/Works/Work.vue";
-
-export default {
-  components: {
-    Work,
-  },
-};
-</script>
-
-<style></style>
