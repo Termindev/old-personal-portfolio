@@ -4,7 +4,7 @@ import Footer from "@/components/Footer.vue";
 </script>
 <template>
   <Nav />
-  <router-view> </router-view>
+  <router-view />
   <Footer />
 </template>
 
@@ -19,16 +19,6 @@ import Footer from "@/components/Footer.vue";
   font-family: "Poppins", sans-serif;
   font-family: "Ubuntu", sans-serif;
 }
-
-/* .fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-  transform: translateX(120px);
-}
-.fade-enter-active,
-.fade-leave-active {
-  transition: all 0.5s ease-in;
-} */
 
 .aurora-outer {
   background: linear-gradient(45deg, #32a6ff 0%, #3f6fff 49%, #8d54ff 82%);

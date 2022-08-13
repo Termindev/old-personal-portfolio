@@ -7,7 +7,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="container md:max-w-xs" style="max-width: 240px">
+  <div class="container" style="max-width: 240px">
     <div class="card">
       <div class="slide slide1">
         <div class="content">
