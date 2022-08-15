@@ -48,7 +48,7 @@ const sendEmail = () => {
       <textarea
         class="rounded hover:shadow-lg transition-all mt-4 h-20 md:w-4/5 w-11/12 aurora-inner resize-none outline-none border-b border-slate-700 block"
         name="message"
-        placeholder="Hello,&#10;I wan't to hire you"
+        placeholder="Hello,&#10;I want to hire you"
       ></textarea>
     </div>
     <input
