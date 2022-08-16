@@ -52,15 +52,13 @@ const sendEmail = (Response) => {
         placeholder="Hello,&#10;I want to hire you"
       ></textarea>
     </div>
-    <input
-      class="cursor-pointer hover:shadow-2xl transition-all p-3 outline-none mt-1 rounded-xl aurora-inner shadow-lg block"
-      type="submit"
-      value="Send"
-    />
+    <div class="m-2 text-xl">
+      To send your message, please validate the captcha.
+    </div>
     <Captcha
       sitekey="6Lf0bX4hAAAAAPRWaRgeWKrS4jOSs8IAeRH3O3Lt"
       size="normal"
-      theme="light"
+      theme="dark"
       @verify="sendEmail"
       ref="vueRecaptcha"
     >
