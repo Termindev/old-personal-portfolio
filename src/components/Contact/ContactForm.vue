@@ -57,14 +57,14 @@ const sendEmail = (Response) => {
       type="submit"
       value="Send"
     />
-    <vue-recaptcha
+    <Captcha
       sitekey="6Lf0bX4hAAAAAPRWaRgeWKrS4jOSs8IAeRH3O3Lt"
       size="normal"
       theme="light"
       @verify="sendEmail"
       ref="vueRecaptcha"
     >
-    </vue-recaptcha>
+    </Captcha>
   </form>
 </template>
 
