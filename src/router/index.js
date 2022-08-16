@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Main from "../views/Main.vue";
 import Contact from "../views/Contact.vue";
-import Four04 from "../views/404.vue";
 
 const routes = [
   {

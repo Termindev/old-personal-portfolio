@@ -1,9 +1,10 @@
 <script setup>
 import emailjs from "@emailjs/browser";
+import Captcha from "vue3-recaptcha2";
 import { ref } from "@vue/reactivity";
 const form = ref(null);
 
-const sendEmail = () => {
+const sendEmail = (Response) => {
   emailjs
     .sendForm(
       process.env.VUE_APP_SERVICE,
@@ -56,10 +57,14 @@ const sendEmail = () => {
       type="submit"
       value="Send"
     />
-    <div
-      class="g-recaptcha"
-      data-sitekey="6Lf0bX4hAAAAAPRWaRgeWKrS4jOSs8IAeRH3O3Lt"
-    ></div>
+    <vue-recaptcha
+      sitekey="6Lf0bX4hAAAAAPRWaRgeWKrS4jOSs8IAeRH3O3Lt"
+      size="normal"
+      theme="light"
+      @verify="sendEmail"
+      ref="vueRecaptcha"
+    >
+    </vue-recaptcha>
   </form>
 </template>
 
