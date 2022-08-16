@@ -11,9 +11,10 @@ import Work from "@/components/Works/Work.vue";
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 p-4">
       <Work
-        TagOne="Bootstrap"
+        TagOne="HTML & CSS"
+        TagTwo="JS"
         Title="Discord Bot website"
-        imgLink="https://cdn.discordapp.com/attachments/977962045599277139/1005481632813289492/work2.gif"
+        imgLink="https://i.im.ge/2022/08/16/O1bwzX.jswork1.gif"
       />
     </div>
   </div>
