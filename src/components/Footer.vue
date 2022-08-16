@@ -11,7 +11,9 @@
       <a target="_blank" class="mx-2 underline" href="https://vuejs.org/"
         >Vue.js</a
       >
-      (Frameworks used to create this website.)
+      <span class="hidden md:inline">
+        (Frameworks used to create this website.)
+      </span>
     </div>
   </div>
 </template>
