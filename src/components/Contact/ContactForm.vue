@@ -56,6 +56,10 @@ const sendEmail = () => {
       type="submit"
       value="Send"
     />
+    <div
+      class="g-recaptcha"
+      data-sitekey="6Lf0bX4hAAAAAPRWaRgeWKrS4jOSs8IAeRH3O3Lt"
+    ></div>
   </form>
 </template>
 
