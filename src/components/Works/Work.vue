@@ -10,7 +10,7 @@ const props = defineProps({
 
 <template>
   <div
-    class="max-w-sm rounded-lg overflow-hidden shadow-xl border border-slate-700 border-opacity-30"
+    class="max-w-sm rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all border border-slate-700 border-opacity-30"
   >
     <img class="w-full" :src="imgLink" :alt="Title" />
     <div class="px-6 py-4">
