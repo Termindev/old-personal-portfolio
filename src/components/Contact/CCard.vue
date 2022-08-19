@@ -14,7 +14,7 @@ const props = defineProps({
     </div>
     <div class="info text-center">
       <h3 class="text-2xl">Discord</h3>
-      <p>Termin#5881</p>
+      <p>Termin#6068</p>
     </div>
   </div>
 </template>
