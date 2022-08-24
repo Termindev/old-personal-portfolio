@@ -4,7 +4,7 @@ import Goal from "./Goal.vue";
 
 <template>
   <hr />
-  <section class="aurora-outer h-screen">
+  <section class="aurora-outer" style="height: 81vh">
     <div class="text-center p-6">
       <div class="text-6xl">Goals</div>
       <div class="text-xl">Goals I want to achieve</div>

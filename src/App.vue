@@ -52,4 +52,20 @@ import Footer from "@/components/Footer.vue";
     background-position: left top;
   }
 }
+
+html::-webkit-scrollbar {
+  width: 1vw;
+}
+html::-webkit-scrollbar-thumb {
+  border-radius: 14px;
+  background-color: rgb(50, 166, 255, 0.9);
+}
+html::-webkit-scrollbar-thumb:hover {
+  border-radius: 14px;
+  background-color: rgba(22, 137, 224, 0.9);
+}
+html::-webkit-scrollbar-track {
+  background-color: rgba(116, 46, 255, 0.8);
+  box-shadow: 5px 10px;
+}
 </style>
