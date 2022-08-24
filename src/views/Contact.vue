@@ -4,7 +4,9 @@ import ContactForm from "@/components/Contact/ContactForm.vue";
 </script>
 
 <template>
-  <div class="aurora-outer grid grid-cols-1 lg:grid-cols-2 px-8 py-6 sm:p-24">
+  <div
+    class="aurora-outer grid grid-cols-1 lg:grid-cols-2 px-2 sm:px-8 py-6 sm:p-24"
+  >
     <div>
       <h1 class="text-4xl my-4">Get in Contact</h1>
       <h4 class="text-2xl mb-4">Fill up this form to send me an email</h4>
@@ -12,10 +14,20 @@ import ContactForm from "@/components/Contact/ContactForm.vue";
       <div class="border-b md:hidden border-slate-600 my-4"></div>
     </div>
     <div class="mt-2">
-      <h1 class="md:text-4xl text-2xl mb-4">Want to straightly contact me?</h1>
-      <h1 class="md:text-2xl text-xl mb-6">My Contact information</h1>
       <div>
-        <CCard color="fill-blue-600">
+        <h1 class="md:text-4xl text-2xl mb-4">
+          Want to straightly contact me?
+        </h1>
+        <h1 class="md:text-2xl text-xl mb-6">My Contact information</h1>
+      </div>
+      <div>
+        <CCard
+          color="fill-blue-600"
+          Name="Termin#3384"
+          ID="719050609374003210"
+          Tag="Discord"
+          Title="Copy ID"
+        >
           <svg
             style="max-width: 200px"
             xmlns="http://www.w3.org/2000/svg"
