@@ -1,6 +1,12 @@
 <script setup>
 import Software from "./Software.vue";
 import VueWriter from "vue-writer";
+import { ref } from "@vue/reactivity";
+
+const show = ref(false);
+const toggleShow = () => {
+  show.value = !show.value;
+};
 </script>
 
 <template>
@@ -16,7 +22,7 @@ import VueWriter from "vue-writer";
       </h1>
     </div>
     <div
-      class="grid grid-cols-1 md:grid-cols-2 md:pl-8 mr-14 lg:grid-cols-3 place-items-center cn"
+      class="grid grid-cols-1 md:grid-cols-2 md:pl-8 mr-14 lg:grid-cols-3 place-items-center"
     >
       <Software
         imgLink="https://i.im.ge/2022/08/06/FcvxyS.download-removebg-preview.png"
@@ -30,16 +36,42 @@ import VueWriter from "vue-writer";
       />
       <Software
         imgLink="https://i.im.ge/2022/08/06/FcJl10.Tailwind-CSS-Logo-svg-removebg-preview.png"
-        alt="Tailwind_CSS_Logo.svg-removebg-preview"
         title="Tailwind CSS"
         color="bg-blue-600"
       />
       <Software
         imgLink="https://i.im.ge/2022/08/06/FcJoHW.Bootstrap-logo-svg-removebg-preview.png"
-        alt="Bootstrap_logo.svg-removebg-preview"
         title="Bootstrap"
         color="bg-purple-600"
       />
+      <Software
+        imgLink="https://i.im.ge/2022/08/25/OjjxYP.dart.png"
+        title="Dart"
+        id="move"
+        color="bg-sky-600"
+      />
+      <Software
+        imgLink="https://i.im.ge/2022/08/25/OjjWm0.jest.png"
+        title="Jest"
+        color="bg-orange-600"
+      />
+      <div />
+      <Software
+        imgLink="https://i.im.ge/2022/08/25/OjjBmz.nuxt-removebg-preview.png"
+        title="Nuxt"
+        color="bg-green-600"
+      />
+      <div />
     </div>
   </div>
 </template>
+
+<style scoped>
+svg {
+  transition: all 0.4s ease;
+}
+
+.svg {
+  transform: rotate(180deg);
+}
+</style>
