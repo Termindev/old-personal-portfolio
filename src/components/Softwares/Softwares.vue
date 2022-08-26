@@ -25,39 +25,39 @@ const toggleShow = () => {
       class="grid grid-cols-1 md:grid-cols-2 md:pl-8 mr-14 lg:grid-cols-3 place-items-center"
     >
       <Software
-        imgLink="https://i.im.ge/2022/08/06/FcvxyS.download-removebg-preview.png"
+        :imgLink="require('@/assets/Vue.png')"
         title="Vue.js"
         color="bg-green-600"
       />
       <Software
-        imgLink="https://i.im.ge/2022/08/06/FcvzHD.Unofficial-JavaScript-logo-2-svg.png"
+        :imgLink="require('@/assets/js.png')"
         title="JavaScript"
         color="bg-yellow-600"
       />
       <Software
-        imgLink="https://i.im.ge/2022/08/06/FcJl10.Tailwind-CSS-Logo-svg-removebg-preview.png"
+        :imgLink="require('@/assets/tailwind.png')"
         title="Tailwind CSS"
         color="bg-blue-600"
       />
       <Software
-        imgLink="https://i.im.ge/2022/08/06/FcJoHW.Bootstrap-logo-svg-removebg-preview.png"
+        :imgLink="require('@/assets/bootstrap.png')"
         title="Bootstrap"
         color="bg-purple-600"
       />
       <Software
-        imgLink="https://i.im.ge/2022/08/25/OjjxYP.dart.png"
+        :imgLink="require('@/assets/dart.png')"
         title="Dart"
         id="move"
         color="bg-sky-600"
       />
       <Software
-        imgLink="https://i.im.ge/2022/08/25/OjjWm0.jest.png"
+        :imgLink="require('@/assets/jest.png')"
         title="Jest"
         color="bg-orange-600"
       />
       <div />
       <Software
-        imgLink="https://i.im.ge/2022/08/25/OjjBmz.nuxt-removebg-preview.png"
+        :imgLink="require('@/assets/nuxt.png')"
         title="Nuxt"
         color="bg-green-600"
       />

@@ -16,7 +16,7 @@ import Work from "@/components/Works/Work.vue";
         TagOne="HTML & CSS"
         TagTwo="JS"
         Title="Discord Bot website"
-        imgLink="https://i.im.ge/2022/08/16/O1bwzX.jswork1.gif"
+        :imgLink="require('@/assets/work1.gif')"
       />
     </div>
   </div>
