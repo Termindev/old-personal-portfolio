@@ -16,7 +16,7 @@ const props = defineProps({
               :src="imgLink"
               :alt="title"
               class="m-auto mt-2"
-              style="max-width: 180px"
+              style="max-width: 180px; max-height: 180px"
             />
           </div>
         </div>

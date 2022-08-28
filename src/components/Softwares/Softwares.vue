@@ -30,38 +30,21 @@ const toggleShow = () => {
         color="bg-green-600"
       />
       <Software
-        :imgLink="require('@/assets/js.png')"
-        title="JavaScript"
-        color="bg-yellow-600"
-      />
-      <Software
-        :imgLink="require('@/assets/tailwind.png')"
-        title="Tailwind CSS"
-        color="bg-blue-600"
-      />
-      <Software
-        :imgLink="require('@/assets/bootstrap.png')"
-        title="Bootstrap"
-        color="bg-purple-600"
-      />
-      <Software
         :imgLink="require('@/assets/dart.png')"
         title="Dart"
         id="move"
         color="bg-sky-600"
       />
       <Software
-        :imgLink="require('@/assets/jest.png')"
-        title="Jest"
-        color="bg-orange-600"
-      />
-      <div />
-      <Software
         :imgLink="require('@/assets/nuxt.png')"
         title="Nuxt"
         color="bg-green-600"
       />
-      <div />
+      <Software
+        :imgLink="require('@/assets/flutter.png')"
+        title="Flutter"
+        color="bg-sky-600"
+      />
     </div>
   </div>
 </template>
