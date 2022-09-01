@@ -1,6 +1,6 @@
 <template>
   <hr />
-  <div class="aurora-outer grid grid-cols-2 p-5">
+  <div class="aurora-outer grid grid-cols-2 md:grid-cols-1 p-5">
     <div class="mx-auto">Website Made By TerminDev</div>
     <div class="mx-auto">
       Useful links:
