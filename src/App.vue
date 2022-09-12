@@ -9,15 +9,11 @@ import Footer from "@/components/Footer.vue";
 </template>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Dosis:wght@300&family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
   scroll-behavior: smooth;
-  font-family: "Dancing Script", cursive;
-  font-family: "Dosis", sans-serif;
-  font-family: "Lobster", cursive;
-  font-family: "Poppins", sans-serif;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 .aurora-outer {
@@ -54,13 +50,14 @@ import Footer from "@/components/Footer.vue";
 }
 
 html::-webkit-scrollbar {
-  width: 0.2vw;
+  width: 0.8vw;
 }
 
 html::-webkit-scrollbar-thumb {
-  border-radius: 14px;
+  border-radius: 0px;
   background-color: rgb(50, 166, 255, 0.9);
 }
+
 html::-webkit-scrollbar-thumb:hover {
   background-color: rgba(22, 137, 224, 0.8);
 }
