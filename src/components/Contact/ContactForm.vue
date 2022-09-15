@@ -1,12 +1,12 @@
 <script setup>
 import emailjs from "@emailjs/browser";
 import Captcha from "vue3-recaptcha2";
-import { computed, ref } from "@vue/reactivity";
+import { ref } from "@vue/reactivity";
 const hasVerified = ref(false);
 const form = ref(null);
 
 const verify = () => {
-  this.hasVerified = true;
+  this.hasVerified.value = true;
 };
 
 const sendEmail = (Response) => {
@@ -32,7 +32,7 @@ const sendEmail = (Response) => {
 </script>
 
 <template>
-  <form ref="form" @submit.prevent="sendEmail" class="mt-8">
+  <form ref="form" @submit.prevent class="mt-8">
     <div class="mb-8 text-2xl">
       <span>Full Name</span>
       <input
