@@ -1,26 +1,33 @@
 <script setup>
 import emailjs from "@emailjs/browser";
 import Captcha from "vue3-recaptcha2";
-import { ref } from "@vue/reactivity";
+import { computed, ref } from "@vue/reactivity";
+const hasVerified = ref(false);
 const form = ref(null);
 
+const verify = () => {
+  this.hasVerified = true;
+};
+
 const sendEmail = (Response) => {
-  emailjs
-    .sendForm(
-      process.env.VUE_APP_SERVICE,
-      process.env.VUE_APP_TEMPLATE,
-      form.value,
-      process.env.VUE_APP_PUBLIC_KEY
-    )
-    .then(
-      (result) => {
-        console.log("SUCCESS!", result.text);
-      },
-      (error) => {
-        console.log("FAILED...", error.text);
-      }
-    );
-  form.value.reset();
+  if (hasVerified) {
+    emailjs
+      .sendForm(
+        process.env.VUE_APP_SERVICE,
+        process.env.VUE_APP_TEMPLATE,
+        form.value,
+        process.env.VUE_APP_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log("SUCCESS!", result.text);
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+    form.value.reset();
+  }
 };
 </script>
 
@@ -57,12 +64,17 @@ const sendEmail = (Response) => {
     </div>
     <Captcha
       sitekey="6Lf0bX4hAAAAAPRWaRgeWKrS4jOSs8IAeRH3O3Lt"
-      size="normal"
-      theme="dark"
-      @verify="sendEmail"
+      @verify="verify"
       ref="vueRecaptcha"
+      style="overflow: auto"
     >
     </Captcha>
+    <button
+      :disabled="hasVerified ? false : 'true'"
+      class="aurora-inner p-2 rounded-xl my-4 shadow-sm hover:shadow-xl transition-all"
+    >
+      Send Message
+    </button>
   </form>
 </template>
 

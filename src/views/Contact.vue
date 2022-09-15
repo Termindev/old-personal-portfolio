@@ -5,7 +5,7 @@ import ContactForm from "@/components/Contact/ContactForm.vue";
 
 <template>
   <div
-    class="aurora-outer grid grid-cols-1 lg:grid-cols-2 px-2 sm:px-8 py-6 sm:p-24"
+    class="aurora-outer grid grid-cols-1 lg:grid-cols-2 px-6 sm:px-8 py-6 sm:p-24"
   >
     <div>
       <h1 class="text-4xl my-4">Get in Contact</h1>

@@ -8,6 +8,6 @@ import Works from "@/components/Works/Works.vue";
   <div>
     <WText />
     <Softwares />
-    <Works />
+    <!-- <Works /> -->
   </div>
 </template>
