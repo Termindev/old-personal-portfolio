@@ -2,36 +2,46 @@
 import emailjs from "@emailjs/browser";
 import Captcha from "vue3-recaptcha2";
 import { ref } from "@vue/reactivity";
-const hasVerified = ref(false);
+import Spinner from "./Spinner.vue";
 const form = ref(null);
+const Loading = ref(false);
+const Sent = ref("");
 
-const verify = () => {
-  this.hasVerified.value = true;
-};
+const sendEmail = async (Response) => {
+  Loading.value = true;
+  await emailjs
+    .sendForm(
+      process.env.VUE_APP_SERVICE,
+      process.env.VUE_APP_TEMPLATE,
+      form.value,
+      process.env.VUE_APP_PUBLIC_KEY
+    )
+    .then(
+      (result) => {
+        console.log("SUCCESS!", result.text);
+        Sent.value = "Sent";
+        setTimeout(() => {
+          Sent.value = "";
+          Loading.value = false;
+        }, 4000);
+      },
+      (error) => {
+        Sent.value = "Error";
+        setTimeout(() => {
+          Sent.value = "";
+          Loading.value = false;
+        }, 4000);
+        console.log("FAILED...", error.text);
+      }
+    );
 
-const sendEmail = (Response) => {
-  if (hasVerified) {
-    emailjs
-      .sendForm(
-        process.env.VUE_APP_SERVICE,
-        process.env.VUE_APP_TEMPLATE,
-        form.value,
-        process.env.VUE_APP_PUBLIC_KEY
-      )
-      .then(
-        (result) => {
-          console.log("SUCCESS!", result.text);
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
-    form.value.reset();
-  }
+  form.value.reset();
+  console.clear();
 };
 </script>
 
 <template>
+  <button @click="sendEmail">test</button>
   <form ref="form" @submit.prevent class="mt-8">
     <div class="mb-8 text-2xl">
       <span>Full Name</span>
@@ -64,18 +74,55 @@ const sendEmail = (Response) => {
     </div>
     <Captcha
       sitekey="6Lf0bX4hAAAAAPRWaRgeWKrS4jOSs8IAeRH3O3Lt"
-      @verify="verify"
+      @verify="sendEmail"
       ref="vueRecaptcha"
       style="overflow: auto"
     >
     </Captcha>
-    <button
-      :disabled="hasVerified ? false : 'true'"
-      class="aurora-inner p-2 rounded-xl my-4 shadow-sm hover:shadow-xl transition-all"
-    >
-      Send Message
-    </button>
   </form>
+  <section
+    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 aurora-inner shadow-lg rounded-xl p-8 z-50"
+    v-if="Loading"
+  >
+    <div class="text-center" v-if="Sent === 'Sent'">
+      <h1 class="text-4xl my-2 mb-4">Message Sent</h1>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-16 h-16 mx-auto"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
+      </svg>
+    </div>
+    <div class="text-center" v-if="Sent === 'Error'">
+      <h1 class="text-4xl my-2 mb-4 px-12">Error</h1>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-16 h-16 mx-auto"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
+      </svg>
+    </div>
+    <div class="text-center" v-else>
+      <h1 class="text-4xl my-2 mb-4">Sending Message</h1>
+      <Spinner />
+    </div>
+  </section>
 </template>
 
 <style scoped>
