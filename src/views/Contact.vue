@@ -23,8 +23,8 @@ import ContactForm from "@/components/Contact/ContactForm.vue";
       <div>
         <CCard
           color="fill-blue-600"
-          Name="Termin#3384"
-          ID="719050609374003210"
+          Name="TerminDev#5344"
+          ID="1021863754310373477"
           Tag="Discord"
           Title="Copy ID"
         >
