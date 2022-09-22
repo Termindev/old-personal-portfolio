@@ -1,7 +1,7 @@
 <template>
   <hr />
   <div class="aurora-outer grid md:grid-cols-2 grid-cols-1 p-5">
-    <div class="mx-auto">Website Made By TerminDev</div>
+    <div class="mx-auto">Website Made By GG</div>
     <div class="mx-auto">
       <span class="hidden sm:inline">Useful links:</span>
       <a target="_blank" class="mx-2 underline" href="https://tailwindcss.com/"
