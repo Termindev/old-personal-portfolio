@@ -41,7 +41,6 @@ const sendEmail = async (Response) => {
 </script>
 
 <template>
-  <button @click="sendEmail">test</button>
   <form ref="form" @submit.prevent class="mt-8">
     <div class="mb-8 text-2xl">
       <span>Full Name</span>
