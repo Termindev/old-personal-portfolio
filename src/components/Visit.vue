@@ -7,7 +7,7 @@
       class="underline"
       >the repo from here</a
     >, or visit my new
-    <a href="https://termin.cypherbot.me/" target="_blank" class="underline"
+    <a href="https://termindev.cf/" target="_blank" class="underline"
       >portfolio from here</a
     >
   </div>
